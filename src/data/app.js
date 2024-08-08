@@ -25,7 +25,6 @@ export const webmap = new WebMap({
 export const view = new MapView({
   map: webmap,
   center: [78.962883, 20.593683],
-  zoom: 1,
 });
 
 setupBasemapGallery(view);
@@ -100,33 +99,6 @@ export const initialize = (container) => {
           popupTemplate: popupTemplate,
         });
         graphicsLayer.add(graphic);
-
-        view.popup.defaultPopupTemplateEnabled = false;
-
-        view.on("click", function(event) {
-          view.hitTest(event).then(function(response) {
-            if (response.results.length) {
-              console.log(response);
-              response.results[0].graphic = graphic;
-
-              var popup = new PopupTemplate({
-                location: event.mapPoint,
-                title: graphic.attributes.Name,
-                content:
-                  "Coordinates: " +
-                  event.mapPoint.latitude +
-                  ", " +
-                  event.mapPoint.longitude,
-              });
-
-              view.map.allLayers.forEach((layer) => {
-                if (layer.popupTemplate) {
-                  layer.popupTemplate = popup;
-                }
-              });
-            }
-          });
-        });
       });
     })
     .catch(noop);

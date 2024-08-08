@@ -1,49 +1,18 @@
-/*
-.basemap-gallery-container {
-  display: none;
-  position: absolute;
-  top: 40px;
-  right: 10px;
-  z-index: 100;
-  background: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  border-radius: 4px;
-}
-
-.basemap-gallery-trigger {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  z-index: 101;
-  padding: 5px;
-  border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  transition: background 0.3s;
-}
-
-.basemap-gallery-trigger:hover {
-  background: rgba(255, 255, 255, 1);
-}
-*/
-
-/* Container for the Basemap Gallery */
 .basemap-gallery-container {
   position: absolute;
   top: 40px;
   right: 10px;
-  width: 300px; /* Adjust width as needed */
+  width: 300px;
   height: auto;
   display: none;
   z-index: 100;
-  background-color: #fff; /* White background for contrast */
-  border: 1px solid #ccc; /* Light border */
-  border-radius: 5px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
-  overflow-y: auto; /* Scroll if needed */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
 }
 
-/* List items in the Basemap Gallery */
 .esri-basemap-gallery__item-container {
   list-style: none;
   margin: 0;
@@ -54,34 +23,31 @@
   display: flex;
   align-items: center;
   padding: 10px;
-  border-bottom: 1px solid #eee; /* Light divider between items */
+  border-bottom: 1px solid #eee;
   cursor: pointer;
   transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .esri-basemap-gallery__item:hover {
-  background-color: #f5f5f5; /* Subtle hover effect */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hover shadow */
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Thumbnail image */
 .esri-basemap-gallery__item-thumbnail {
   width: 50px;
   height: 50px;
   margin-right: 10px;
-  border-radius: 4px; /* Rounded corners for thumbnails */
-  object-fit: cover; /* Ensure thumbnails cover their container */
+  border-radius: 4px;
+  object-fit: cover;
 }
 
-/* Title text for each item */
 .esri-basemap-gallery__item-title {
   font-size: 14px;
-  color: #333; /* Dark text for readability */
+  color: #333;
 }
 
-/* Trigger button for the Basemap Gallery */
 .basemap-gallery-trigger {
-  width: 120px; /* Adjust width as needed */
+  width: 120px;
   background: rgba(255, 255, 255, 0.8);
   position: absolute;
   top: 10px;
@@ -93,9 +59,9 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   text-align: center;
   font-weight: bold;
-  color: #333; /* Dark text for readability */
+  color: #333;
 }
 
 .basemap-gallery-trigger:hover {
-  background: rgba(255, 255, 255, 1); /* Full opacity on hover */
+  background: rgba(255, 255, 255, 1);
 }
